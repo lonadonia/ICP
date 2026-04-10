@@ -39,18 +39,23 @@ export default function App() {
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-between items-center border-b-2 border-slate-800 mb-8 pb-0">
-          <div className="flex gap-8 text-slate-400 text-sm font-medium">
-            <button className="hover:text-white pb-3 transition-colors">Overview</button>
-            <button className="hover:text-white pb-3 transition-colors">Signals</button>
-            <button className="hover:text-white pb-3 transition-colors">Opportunities</button>
-            <button className="text-white border-b-4 border-white pb-3">Activity</button>
-            <button className="hover:text-white pb-3 transition-colors">People</button>
-            <button className="hover:text-white pb-3 transition-colors">Company</button>
+        <div className="flex justify-between items-center bg-slate-900/40 border border-slate-700/60 rounded-2xl mb-8">
+          <div className="flex gap-8 text-slate-400 text-[15px] font-medium px-6">
+            <button className="hover:text-white transition-colors py-4">Overview</button>
+            <button className="hover:text-white transition-colors py-4">Signals</button>
+            <button className="hover:text-white transition-colors py-4">Opportunities</button>
+            <div className="relative flex items-center">
+              <button className="text-white py-4">Activity</button>
+              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white rounded-t-md shadow-[0_-2px_10px_rgba(255,255,255,0.6)]"></div>
+            </div>
+            <button className="hover:text-white transition-colors py-4">People</button>
+            <button className="hover:text-white transition-colors py-4">Company</button>
           </div>
-          <button className="flex items-center gap-2 bg-slate-800/50 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm border-2 border-slate-700 mb-2 transition-colors">
-            <Phone size={14} /> Call this week <ChevronDown size={14} />
-          </button>
+          <div className="pr-3">
+            <button className="flex items-center gap-2 bg-slate-800/40 hover:bg-slate-700/60 text-slate-200 px-4 py-2 rounded-xl text-sm border border-slate-700/60 transition-colors">
+              <Phone size={14} className="text-slate-400" /> Call this week <ChevronDown size={14} className="text-slate-400" />
+            </button>
+          </div>
         </div>
 
         {/* Grid Layout */}
