@@ -39,16 +39,16 @@ export default function App() {
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-between items-center border-b border-slate-800 mb-8 pb-0">
+        <div className="flex justify-between items-center border-b-2 border-slate-800 mb-8 pb-0">
           <div className="flex gap-8 text-slate-400 text-sm font-medium">
             <button className="hover:text-white pb-3 transition-colors">Overview</button>
             <button className="hover:text-white pb-3 transition-colors">Signals</button>
             <button className="hover:text-white pb-3 transition-colors">Opportunities</button>
-            <button className="text-white border-b-2 border-white pb-3">Activity</button>
+            <button className="text-white border-b-4 border-white pb-3">Activity</button>
             <button className="hover:text-white pb-3 transition-colors">People</button>
             <button className="hover:text-white pb-3 transition-colors">Company</button>
           </div>
-          <button className="flex items-center gap-2 bg-slate-800/50 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm border border-slate-700 mb-2 transition-colors">
+          <button className="flex items-center gap-2 bg-slate-800/50 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm border-2 border-slate-700 mb-2 transition-colors">
             <Phone size={14} /> Call this week <ChevronDown size={14} />
           </button>
         </div>
@@ -66,15 +66,15 @@ export default function App() {
               <div className="space-y-5 text-sm mt-2">
                 <div className="flex items-center gap-2">
                   <span className="text-slate-400 w-20">Status:</span>
-                  <span className="border border-blue-500/50 text-blue-400 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10">Proposal sent</span>
+                  <span className="border-2 border-blue-500/50 text-blue-400 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10">Proposal sent</span>
                   <span className="text-slate-400 ml-2">Interest:</span>
-                  <span className="border border-yellow-500/50 text-yellow-400 px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-500/10">Medium</span>
+                  <span className="border-2 border-yellow-500/50 text-yellow-400 px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-500/10">Medium</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-slate-400 w-20">Last contact:</span>
                   <span className="text-white font-medium">8 days ago</span>
                   <span className="text-slate-400 ml-2">Risk:</span>
-                  <span className="border border-red-500/50 text-red-400 px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-500/10 flex items-center gap-1.5">
+                  <span className="border-2 border-red-500/50 text-red-400 px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-500/10 flex items-center gap-1.5">
                     <AlertTriangle size={12} /> No response in 8 days
                   </span>
                 </div>
@@ -249,7 +249,7 @@ export default function App() {
 }
 
 const KpiCard = ({ title, value, icon, colorClass }: { title: string, value: string, icon: React.ReactNode, colorClass: string }) => (
-  <div className={`border rounded-xl p-4 flex flex-col justify-between w-36 bg-slate-900/60 backdrop-blur-md ${colorClass}`}>
+  <div className={`border-2 rounded-xl p-4 flex flex-col justify-between w-36 bg-slate-900/60 backdrop-blur-md ${colorClass}`}>
     <div className="flex justify-between items-center mb-3 text-[11px] text-slate-400 uppercase tracking-wider font-semibold">
       {title} <ChevronRight size={14} className="text-slate-500" />
     </div>
@@ -261,7 +261,7 @@ const KpiCard = ({ title, value, icon, colorClass }: { title: string, value: str
 );
 
 const Card = ({ title, icon, children, colorClass, subtitle }: { title: string, icon: React.ReactNode, children: React.ReactNode, colorClass: string, subtitle?: string }) => (
-  <div className={`border rounded-xl p-5 bg-slate-900/60 backdrop-blur-md ${colorClass}`}>
+  <div className={`border-2 rounded-xl p-5 bg-slate-900/60 backdrop-blur-md ${colorClass}`}>
     <div className="flex justify-between items-center mb-2">
       <div className="flex items-center gap-2 text-white font-medium">
         {icon}
@@ -287,7 +287,7 @@ const ActionItem = ({ number, title, subtitle, color }: { number: string, title:
   };
 
   return (
-    <div className={`flex items-center justify-between border rounded-lg p-3 transition-colors hover:bg-slate-800/50 cursor-pointer ${colorMap[color]}`}>
+    <div className={`flex items-center justify-between border-2 rounded-lg p-3 transition-colors hover:bg-slate-800/50 cursor-pointer ${colorMap[color]}`}>
       <div className="flex items-center gap-3">
         <div className={`w-6 h-6 rounded flex items-center justify-center text-xs font-bold ${numberBgMap[color]}`}>
           {number}
@@ -321,7 +321,7 @@ const TimelineItem = ({ date, title, subtitle, tag, tagColor, dotColor }: { date
           <div className="text-slate-200 text-sm font-medium leading-tight">{title}</div>
           <div className="text-slate-400 text-xs mt-1">{subtitle}</div>
         </div>
-        <span className={`border px-2 py-0.5 rounded-full text-[10px] font-medium whitespace-nowrap ${tagColors[tagColor]}`}>
+        <span className={`border-2 px-2 py-0.5 rounded-full text-[10px] font-medium whitespace-nowrap ${tagColors[tagColor]}`}>
           {tag}
         </span>
       </div>
